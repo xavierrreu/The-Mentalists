@@ -1,0 +1,33 @@
+var numeroSecreto = parseInt(Math.random() * 1001)
+var numeroChutes = 0
+var nome = prompt ('Olá, internauta! Antes de começarmos nossa jornada, preciso de uma informação. Qual o seu nome?')
+var mensagem = alert ('Entendido, ' + nome + '. Esse é o Mentalista, um jogo que coloca o homem contra a máquina. Você terá que adivinhar um número de 0 a 1000 em apenas 10 tentativas, preparado?')
+
+while (chute != numeroSecreto){
+      var chute = prompt ('Digite o um número entre 0 e 1000')
+      numeroChutes++
+      
+      if (chute == numeroSecreto) {alert('Parabéns! Você acertou após ' + numeroChutes + ' tentativas!') 
+                                 break
+                                }
+                                
+                                  else if (chute>numeroSecreto) {alert ('Errou, o número secreto é menor do que ' + chute + '.' + ' Restam ' + (10 - numeroChutes) + ' tentativas, tente novamente...')}
+
+    else if (chute<numeroSecreto){alert('Errou, o número secreto é maior do que ' + chute + '.' + ' Restam ' + (10 - numeroChutes) + ' tentativas, tente novamente!')}
+  
+  if (numeroChutes == 5){alert('Parece que você não é capaz de me vencer, não é ' + nome + '? Pense melhor, você já utilizou metade das tentativas...')}
+  
+  if (numeroChutes == 7){alert('Ainda dá tempo de desistir, caro participante. Restam apenas 3 tentativas...')
+                         var desistencia = prompt ('Você gostaria de desistir? Digite 1 para desistir e 2 para continar...')
+  if (desistencia == 1){alert ('Sábia escolha, ' + nome + '. Sabia que você não seria capaz de me vencer.')
+                         break
+                         }
+  else{ alert('Você não desiste mesmo! Vamos ver se consegue...')}}
+ 
+  
+  if (numeroChutes == 9){alert('Escolha com cuidado, resta apenas 1 tentativa...')}
+  
+  if (numeroChutes == 10){alert ('Suas tentativas acabaram. Infelizmente parece que você é burro demais para jogar esse jogo. Vá estudar!') 
+                          break
+                         }  
+}
